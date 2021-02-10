@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22769f84-a21a-4978-a9df-d5aec2f89549" name="Default Changelist" comment="" />
+    <list default="true" id="22769f84-a21a-4978-a9df-d5aec2f89549" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,9 +21,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.App.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -31,6 +45,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612366259053</updated>
       <workItem from="1612366260192" duration="540000" />
+      <workItem from="1612366972598" duration="274000" />
+      <workItem from="1612879170888" duration="85000" />
     </task>
     <servers />
   </component>
@@ -38,6 +54,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1612879255015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1612879255015" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1612879255015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1612879255015" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1612879255015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1612879255015" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1612879255015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1612879255015" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1612366820127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

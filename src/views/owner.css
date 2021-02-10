@@ -1,0 +1,22 @@
+.yes{
+    background-color: rgb(62, 173, 40);
+    border: 1px solid rgb(62, 173, 40);
+}
+
+.no {
+    background-color: rgb(255, 65, 65);
+    border: 1px solid  rgb(255, 65, 65);
+}
+
+.no:hover{
+    background-color: rgb(196, 50, 50);
+}
+
+.yes:hover{
+    background-color: rgb(51, 141, 33);
+}
+
+.good{
+    color:rgb(62, 173, 40);
+    font-size: 20px;
+}
