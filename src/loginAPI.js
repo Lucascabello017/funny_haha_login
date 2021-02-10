@@ -1,4 +1,4 @@
-let validateCredentials = function (request, response) {
+let validateCredentials = function (request) {
     let [user, password] = request;
     fetch("https://localhost:3000/validateCredentials?user=" + user + "&password=" + password)
         .then(handleCredentialsSuccess)
@@ -12,7 +12,7 @@ let handleCredentialsSuccess = function (response) {
             //Advance to success screen
         } else {
             if (response.userValid === true) {
-                if (response.loginAttempt === 2 && userValid === true) {
+                if (response.loginAttempt === 2 && response.userValid === true) {
                     //Pull up the questions screen
                 }
             } else {
@@ -22,7 +22,7 @@ let handleCredentialsSuccess = function (response) {
     } else {
         handleError(response.err, "")
     }
-}
+};
 
 
 let handleError = function (textStatus, errorThrown) {
@@ -30,13 +30,13 @@ let handleError = function (textStatus, errorThrown) {
     console.log(textStatus + errorThrown);
 }
 
-let handleQuestions = function (request, response) {
+let handleQuestions = function (request) {
     let answers = request;
     fetch("https://localhost:3000/questions?answers=" + answers[0] + "," + answers[1] + "," + answers[2])
         .then(handleQuestionsSuccess)
         .catch(handleError)
 
-}
+};
 
 let handleQuestionsSuccess = function (response) {
     if (response.status === 200) {
@@ -48,4 +48,4 @@ let handleQuestionsSuccess = function (response) {
     } else {
         handleError(response.err, "")
     }
-}
+};
