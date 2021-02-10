@@ -26,7 +26,7 @@ app.get('/validateCredentials', function (req, res){
             if (user.password === req.password){
                 res.send({
                     login: true,
-                    loginAttemp:0,
+                    loginAttempt:0,
                     userValid: true
                 });
                 count = 0;
@@ -34,14 +34,14 @@ app.get('/validateCredentials', function (req, res){
                 count++;
                 res.send({
                     login: false,
-                    loginAttemp:count,
+                    loginAttempt:count,
                     userValid: true
                 });
             }
         } else {
             res.send({
                 login: false,
-                loginAttemp:count,
+                loginAttempt:count,
                 userValid: false
             });
         }
