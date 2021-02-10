@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22769f84-a21a-4978-a9df-d5aec2f89549" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,16 +56,33 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.Test Login.should test it you can log in correctly with the correct username &amp; password">
+    <configuration name="Test Login.should test it you can log in correctly with the correct username &amp; password" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server.test.js" />
+      <test-names>
+        <test-name value="Test Login" />
+        <test-name value="should test it you can log in correctly with the correct username &amp; password" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Test Login.should test it you can log in correctly with the correct username &amp; password" />
         <item itemvalue="Node.js.server.js" />
       </list>
     </recent_temporary>
@@ -76,7 +97,7 @@
       <updated>1612366259053</updated>
       <workItem from="1612366260192" duration="2131000" />
       <workItem from="1612879570192" duration="3913000" />
-      <workItem from="1612965700171" duration="751000" />
+      <workItem from="1612965700171" duration="5952000" />
     </task>
     <servers />
   </component>
@@ -96,25 +117,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1612886639609">
+    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1612970464088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612886639609" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1612886639609">
+    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612970464088" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1612970209154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612886639609" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1612886639609">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612970209154" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1612970209153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612886639609" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1612886639609">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612970209153" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1612970209153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612886639609" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1612366820127">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612970209153" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1612970209154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612366820127" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612970209154" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1612968891773">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612968891773" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1612970911318">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1612970911318" />
   </component>
 </project>
