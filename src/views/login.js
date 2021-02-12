@@ -1,5 +1,5 @@
 import './Login.css';
-//import {validateCredentials} from '../loginAPI.js';
+import {validateCredentials} from '../loginAPI.js';
 import React, {useEffect} from 'react';
 
 function Login({loginFailure, loginSuccess}) {
@@ -32,7 +32,7 @@ function Login({loginFailure, loginSuccess}) {
             console.log("Username: " + username);
             console.log("Password: " + password);
             
-            //validateCredentials([username, password]);
+            validateCredentials([username, password]);
             if(loginAttempts < 3){
 
                 let isValid = false;

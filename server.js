@@ -1,8 +1,10 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 let count = 0;
+let locked = false;
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
@@ -20,46 +22,54 @@ let ansQuestion = function (questionNum, ans){
 }
 
 app.get('/validateCredentials', function (req, res){
-    console.log(req);
-    console.log(res);
-    if (req.body && req.body.user && req.body.password){
-        let user = users.find(user => user.user === req.body.user);
-        if (users){
-            if (user.password === req.password){
-                res.send({
-                    login: true,
-                    loginAttempt:0,
-                    userValid: true
-                });
-                count = 0;
+    if (!locked) {
+        if (req.query !== undefined && req.query.user !== undefined && req.query.password !== undefined) {
+            let user = users.find(user => user.user === req.query.user);
+            if (user !== undefined) {
+                if (user.password === req.query.password) {
+                    res.send({
+                        login: true,
+                        loginAttempt: 0,
+                        userValid: true
+                    });
+                    count = 0;
+                } else {
+                    count++;
+                    res.send({
+                        login: false,
+                        loginAttempt: count,
+                        userValid: true
+                    });
+                    if (count === 3){
+                        locked = true;
+                    } 
+
+                }
+                    
             } else {
-                count++;
                 res.send({
                     login: false,
-                    loginAttempt:count,
-                    userValid: true
+                    loginAttempt: count,
+                    userValid: false
                 });
             }
         } else {
-            res.send({
-                login: false,
-                loginAttempt:count,
-                userValid: false
-            });
+            res.send({err: "ERROR: No username or password"});
         }
     } else {
-        res.send({err:"ERROR: No username or password"});
+        res.send({err:"ERROR: server locked. Please respond the questions"});
     }
 });
 
 app.get('/questions', function (req, res){
-    if (req.body && req.body.answers){
-        const q1 = ansQuestion(0, req.body.answers[0]);
-        const q2 = ansQuestion(1, req.body.answers[1]);
-        const q3 = ansQuestion(2, req.body.answers[2]);
+    if (req.query && req.query.answers){
+        const q1 = ansQuestion(0, req.query.answers[0]);
+        const q2 = ansQuestion(1, req.query.answers[1]);
+        const q3 = ansQuestion(2, req.query.answers[2]);
 
         if (q1 && q2 && q3){
             count = 0;
+            locked = false;
             res.send({answeredCorrectly:true});
         } else {
             res.send({answeredCorrectly:false});
@@ -68,3 +78,5 @@ app.get('/questions', function (req, res){
 })
 
 app.listen(process.env.PORT || 8080);
+
+module.exports = app;
