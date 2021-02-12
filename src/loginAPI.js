@@ -33,7 +33,7 @@ let handleError = function (textStatus, errorThrown) {
 
 let handleQuestions = function (request) {
     let answers = request;
-    fetch("https://localhost:8080/questions?answers=" + answers[0] + "," + answers[1] + "," + answers[2])
+    fetch("http://localhost:8080/questions?answers=" + answers[0] + "," + answers[1] + "," + answers[2])
         .then(handleQuestionsSuccess)
         .catch(handleError)
 
