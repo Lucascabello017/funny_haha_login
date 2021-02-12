@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22769f84-a21a-4978-a9df-d5aec2f89549" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/login_implementation_soft_arch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/login_implementation_soft_arch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +150,7 @@
       <workItem from="1612366260192" duration="2131000" />
       <workItem from="1612879570192" duration="3913000" />
       <workItem from="1612965700171" duration="8415000" />
-      <workItem from="1613091359010" duration="12857000" />
+      <workItem from="1613091359010" duration="13341000" />
     </task>
     <servers />
   </component>
@@ -187,22 +182,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613101081319" />
-    <state width="1515" height="273" key="GridCell.Tab.0.bottom" timestamp="1613104187181">
+    <state width="1515" height="273" key="GridCell.Tab.0.bottom" timestamp="1613104606724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104187181" />
-    <state width="1515" height="273" key="GridCell.Tab.0.center" timestamp="1613104187180">
+    <state width="1515" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104606724" />
+    <state width="1515" height="273" key="GridCell.Tab.0.center" timestamp="1613104606724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="273" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104187180" />
-    <state width="1515" height="273" key="GridCell.Tab.0.left" timestamp="1613104187180">
+    <state width="1515" height="273" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104606724" />
+    <state width="1515" height="273" key="GridCell.Tab.0.left" timestamp="1613104606724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="273" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104187180" />
-    <state width="1515" height="273" key="GridCell.Tab.0.right" timestamp="1613104187181">
+    <state width="1515" height="273" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104606724" />
+    <state width="1515" height="273" key="GridCell.Tab.0.right" timestamp="1613104606724">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="273" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104187181" />
+    <state width="1515" height="273" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104606724" />
+    <state x="498" y="115" key="RollbackChangesDialog" timestamp="1613104600762">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="115" key="RollbackChangesDialog/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613104600762" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1613098025862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
