@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
+import './questions.css';
 
-function Questions() {
+function Questions({questionsAnswered}) {
 
     let [isInvalidAttempt, setIsInvalidAttempt] = React.useState(false);
     let [hasEmptyQuestions, setHasEmptyQuestions] = React.useState(false);
     let [questions, setQuestions] = React.useState(false);
     let [answers, setAnswers] = React.useState(false);
+    const realAnswers = ["purple", "US", "dog"];
 
     useEffect(() => {
-        setQuestions(['How are you?', 'What do you like?', 'How goes it?']);
+        setQuestions(['What is your favorite color?', 'Where were you born?', 'What is your pet?']);
         setAnswers(["", "", ""]);
     }, []);
 
@@ -24,7 +26,20 @@ function Questions() {
         }
 
         if(notEmpty){
-            console.log(answers);
+            let invalidAnswer = false;
+            
+            for(let i = 0; i < answers.length; i++){
+                if(answers[i] !== realAnswers[i]){
+                    invalidAnswer = true;
+                }
+            }
+
+            if(invalidAnswer){
+                setIsInvalidAttempt(true);
+            } else {
+                questionsAnswered();
+            }
+
         } else{
             setHasEmptyQuestions(true);
         }
@@ -46,11 +61,13 @@ function Questions() {
     }
 
     return (
-        <div className="Test">
-            <div>{questions[0]} <input type="text" onChange={handleA1Change}></input></div>
-            <div>{questions[1]} <input type="text" onChange={handleA2Change}></input></div>
-            <div>{questions[2]} <input type="text" onChange={handleA3Change}></input></div>
-            <div><button onClick={submitAnswers}>Submit</button></div>
+        <div>
+            <div className="question"><span>{questions[0]}</span><input type="text" onChange={handleA1Change}></input></div>
+            <div className="question"><span>{questions[1]}</span><input type="text" onChange={handleA2Change}></input></div>
+            <div className="question"><span>{questions[2]}</span><input type="text" onChange={handleA3Change}></input></div>
+            <div className="submit">
+                <button onClick={submitAnswers}>Submit</button>
+            </div>
 
             {isInvalidAttempt &&
                 <div className="Error">

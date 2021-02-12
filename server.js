@@ -20,6 +20,8 @@ let ansQuestion = function (questionNum, ans){
 }
 
 app.get('/validateCredentials', function (req, res){
+    console.log(req);
+    console.log(res);
     if (req.body && req.body.user && req.body.password){
         let user = users.find(user => user.user === req.body.user);
         if (users){

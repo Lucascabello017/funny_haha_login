@@ -1,0 +1,9 @@
+
+.question span {
+    float:left;
+}
+
+.submit{
+    text-align: center;
+    margin: auto;
+}
