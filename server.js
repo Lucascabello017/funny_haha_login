@@ -61,9 +61,10 @@ app.get('/validateCredentials', function (req, res){
 
 app.get('/questions', function (req, res){
     if (req.query && req.query.answers){
-        const q1 = ansQuestion(0, req.query.answers[0]);
-        const q2 = ansQuestion(1, req.query.answers[1]);
-        const q3 = ansQuestion(2, req.query.answers[2]);
+        let answers = req.query.answers.split(",")
+        const q1 = ansQuestion(0, answers[0]);
+        const q2 = ansQuestion(1, answers[1]);
+        const q3 = ansQuestion(2, answers[2]);
 
         if (q1 && q2 && q3){
             count = 0;
