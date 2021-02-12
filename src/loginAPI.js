@@ -1,7 +1,7 @@
 export function validateCredentials(request) {
     let user = request[0];
     let password = request[1];
-    fetch("https://localhost:8080/validateCredentials?user=" + user + "&password=" + password)
+    fetch("http://localhost:8080/validateCredentials?user=" + user + "&password=" + password)
         .then(handleCredentialsSuccess)
         .catch(handleError);
 };
