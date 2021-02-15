@@ -1,6 +1,6 @@
 import './Login.css';
-import {validateCredentials} from '../loginAPI.js';
 import React, {useEffect} from 'react';
+import $ from "jquery";
 
 function Login({loginFailure, loginSuccess}) {
 
@@ -9,7 +9,6 @@ function Login({loginFailure, loginSuccess}) {
     let [isEmptyField, setIsEmptyField] = React.useState(false);
     let [isInvalidAttempt, setIsInvalidAttempt] = React.useState(false);
     let [loginAttempts, setLoginAttempts] = React.useState(false);
-    const accounts = [{user: "Darren", pass: "Fitch"}, {user: "Lucas", pass: "Cabello"}, {user: "Austin", pass: "DeMars"}];
 
     useEffect(() => {
         setLoginAttempts(0);
@@ -23,39 +22,60 @@ function Login({loginFailure, loginSuccess}) {
         setPassword(e.target.value)
     }
 
+    let handleCredentialsSuccess = (response) => {
+
+        if (response.err === undefined) {
+            if (response.login === true) {
+                //Advance to success screen
+                console.log("Logged in");
+                loginSuccess();
+            } else {
+                if (response.userValid === true) {
+                    if (response.loginAttempt === 3) {
+                        //Pull up the questions screen
+                        console.log("Question time");
+                        loginFailure();
+                    } else{
+                        setLoginAttempts(response.loginAttempt);
+                        setIsInvalidAttempt(true);
+                    }
+                } else {
+                    setLoginAttempts(response.loginAttempt);
+                    setIsInvalidAttempt(true);
+                    console.log("Invalid user log-in attempt");
+                }
+            }
+        } else {
+            setIsInvalidAttempt(true);
+            console.log(response.err);
+            handleError(response.err, "");
+        }
+    };
+    
+    
+    let handleError = (textStatus, errorThrown) => {
+        console.log("Error when processing request");
+        console.log(textStatus + "\t" + errorThrown);
+    }
+
     let login = () => {
 
         setIsInvalidAttempt(false);
         setIsEmptyField(false);
-
         if(username && username !== "" && password && password !== ""){
-            console.log("Username: " + username);
-            console.log("Password: " + password);
-            
-            validateCredentials([username, password]);
-            if(loginAttempts < 3){
 
-                let isValid = false;
-                
-                for(let i = 0; i < accounts.length; i++){
-                    let account = accounts[i];
-                    if(username === account.user && password === account.pass){
-                        isValid = true;
-                    }
-                }
-
-                if(isValid){
-                    loginSuccess();
-                } else{
-                    setLoginAttempts(loginAttempts+1);
-                    setIsInvalidAttempt(true);
-                }
-            }
-
-            if(loginAttempts >= 2){
-                loginFailure();
-            }
-
+            $.ajax({
+                type:'GET',
+                url:'http://localhost:8080/validateCredentials',
+                data: {
+                    user: username,
+                    password: password
+                },
+                dataType: "JSON",
+                async:true,
+                success: handleCredentialsSuccess,
+                error: handleError
+            })
         } else {
             setIsEmptyField(true);
         }

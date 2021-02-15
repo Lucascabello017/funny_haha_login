@@ -6,6 +6,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 let count = 0;
 let locked = false;
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
@@ -22,6 +28,8 @@ let ansQuestion = function (questionNum, ans){
 }
 
 app.get('/validateCredentials', function (req, res){
+    console.log('credentials received');
+    console.log(req.query);
     if (!locked) {
         if (req.query !== undefined && req.query.user !== undefined && req.query.password !== undefined) {
             let user = users.find(user => user.user === req.query.user);
@@ -62,8 +70,8 @@ app.get('/validateCredentials', function (req, res){
 });
 
 app.get('/questions', function (req, res){
-    if (req.query && req.query.answers){
-        let answers = req.query.answers.split(",")
+    if (req.query !== undefined && req.query.answers !== undefined){
+        let answers = JSON.parse(req.query.answers);
         const q1 = ansQuestion(0, answers[0]);
         const q2 = ansQuestion(1, answers[1]);
         const q3 = ansQuestion(2, answers[2]);
@@ -75,6 +83,8 @@ app.get('/questions', function (req, res){
         } else {
             res.send({answeredCorrectly:false});
         }
+    } else {
+        res.send({err:"ERROR: invalid format"});
     }
 })
 

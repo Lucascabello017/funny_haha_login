@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './questions.css';
+import $ from "jquery";
 
 function Questions({questionsAnswered}) {
 
@@ -7,12 +8,30 @@ function Questions({questionsAnswered}) {
     let [hasEmptyQuestions, setHasEmptyQuestions] = React.useState(false);
     let [questions, setQuestions] = React.useState(false);
     let [answers, setAnswers] = React.useState(false);
-    const realAnswers = ["purple", "US", "dog"];
 
     useEffect(() => {
-        setQuestions(['What is your favorite color?', 'Where were you born?', 'What is your pet?']);
+        setQuestions(['What\'s your first pet\'s name?', 'Where did you go to college?', 'What model was your first car?']);
         setAnswers(["", "", ""]);
     }, []);
+
+    let handleQuestionsSuccess = function (response) {
+        if (response.err === undefined) {
+            if (response.answeredCorrectly === true) {
+                questionsAnswered();
+            } else {
+                console.log("Questions were answered incorrectly")
+                setIsInvalidAttempt(true);
+            }
+        } else {
+            handleError(response.err, "")
+        }
+    };
+
+
+    let handleError = function (textStatus, errorThrown) {
+        console.log("Error when processing request");
+        console.log(textStatus + "\t" + errorThrown);
+    }
 
     let submitAnswers = () => {
         setIsInvalidAttempt(false);
@@ -26,20 +45,17 @@ function Questions({questionsAnswered}) {
         }
 
         if(notEmpty){
-            let invalidAnswer = false;
-            
-            for(let i = 0; i < answers.length; i++){
-                if(answers[i] !== realAnswers[i]){
-                    invalidAnswer = true;
-                }
-            }
-
-            if(invalidAnswer){
-                setIsInvalidAttempt(true);
-            } else {
-                questionsAnswered();
-            }
-
+            $.ajax({
+                type:'GET',
+                url:'http://localhost:8080/questions',
+                data: {
+                    answers: JSON.stringify(answers)
+                },
+                dataType: "JSON",
+                async:true,
+                success: handleQuestionsSuccess,
+                error: handleError
+            })
         } else{
             setHasEmptyQuestions(true);
         }

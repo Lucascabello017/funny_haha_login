@@ -6,7 +6,9 @@
   "dependencies": {
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "ajax": "0.0.4",
     "express": "^4.17.1",
+    "jquery": "^3.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
