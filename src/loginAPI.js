@@ -1,7 +1,20 @@
 export function validateCredentials(request) {
     let user = request[0];
     let password = request[1];
-    fetch("http://localhost:8080/validateCredentials?user=" + user + "&password=" + password)
+
+    const requestOptions = {
+        method: 'GET',
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
+    };
+
+    var myInit = { method: 'GET',
+               mode: 'no-cors' };
+
+    const requestObj = new Request("http://localhost:8080/validateCredentials?user=" + user + "&password=" + password);
+
+    fetch(requestObj, myInit)
         .then(handleCredentialsSuccess)
         .catch(handleError);
 };
