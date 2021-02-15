@@ -8,6 +8,7 @@ function Login({loginFailure, loginSuccess}) {
     let [password, setPassword] = React.useState(false);
     let [isEmptyField, setIsEmptyField] = React.useState(false);
     let [isInvalidAttempt, setIsInvalidAttempt] = React.useState(false);
+    let [isInvalidInfo, setIsInvalidInfo] = React.useState(false);
     let [loginAttempts, setLoginAttempts] = React.useState(false);
 
     useEffect(() => {
@@ -41,12 +42,12 @@ function Login({loginFailure, loginSuccess}) {
                     }
                 } else {
                     setLoginAttempts(response.loginAttempt);
-                    setIsInvalidAttempt(true);
+                    setIsInvalidInfo(true);
                     console.log("Invalid user log-in attempt");
                 }
             }
         } else {
-            setIsInvalidAttempt(true);
+            setIsInvalidInfo(true);
             console.log(response.err);
             handleError(response.err, "");
         }
@@ -62,6 +63,7 @@ function Login({loginFailure, loginSuccess}) {
 
         setIsInvalidAttempt(false);
         setIsEmptyField(false);
+        setIsInvalidInfo(false);
         if(username && username !== "" && password && password !== ""){
 
             $.ajax({
@@ -102,6 +104,11 @@ function Login({loginFailure, loginSuccess}) {
             {isInvalidAttempt &&
                 <div className="Error">
                     Login attempts failed: {loginAttempts} of 3
+                </div>
+            }
+            {isInvalidInfo &&
+                <div className="Error">
+                    Account information is invalid
                 </div>
             }
         </div>
