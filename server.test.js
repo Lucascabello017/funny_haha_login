@@ -117,7 +117,7 @@ describe('Incorrect Login Tests',  () => {
             await request(app)
                 .get('/questions')
                 .query({
-                    answers: ['not', 'correct', 'answers']
+                    answers: JSON.stringify(['not', 'correct', 'answers'])
                 })
                 .expect({
                     answeredCorrectly:false
@@ -128,7 +128,7 @@ describe('Incorrect Login Tests',  () => {
             await request(app)
                 .get('/questions')
                 .query({
-                    answers: ['dog', 'MSOE', 'car']
+                    answers: JSON.stringify(['dog', 'MSOE', 'car'])
                 })
                 .expect({
                     answeredCorrectly:true

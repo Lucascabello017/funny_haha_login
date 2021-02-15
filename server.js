@@ -29,7 +29,6 @@ let ansQuestion = function (questionNum, ans){
 
 app.get('/validateCredentials', function (req, res){
     console.log('credentials received');
-    console.log(req.query);
     if (!locked) {
         if (req.query !== undefined && req.query.user !== undefined && req.query.password !== undefined) {
             let user = users.find(user => user.user === req.query.user);
@@ -70,6 +69,7 @@ app.get('/validateCredentials', function (req, res){
 });
 
 app.get('/questions', function (req, res){
+    console.log("questions received");
     if (req.query !== undefined && req.query.answers !== undefined){
         let answers = JSON.parse(req.query.answers);
         const q1 = ansQuestion(0, answers[0]);

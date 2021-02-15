@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c4114d9-baf0-4624-8b0a-12b13aa6e4ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loginAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,15 +32,31 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.Correct Login Tests.should log in with &quot;Lucas&quot; &quot;Cabello&quot;">
+    <configuration name="Correct Login Tests.should log in with &quot;Lucas&quot; &quot;Cabello&quot;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/server.test.js" />
+      <test-names>
+        <test-name value="Correct Login Tests" />
+        <test-name value="should log in with &quot;Lucas&quot; &quot;Cabello&quot;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="server.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Correct Login Tests.should log in with &quot;Lucas&quot; &quot;Cabello&quot;" />
         <item itemvalue="Node.js.server.js" />
       </list>
     </recent_temporary>
@@ -57,7 +69,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613141201314</updated>
-      <workItem from="1613141202490" duration="6228000" />
+      <workItem from="1613141202490" duration="7160000" />
+      <workItem from="1613399817214" duration="3043000" />
     </task>
     <servers />
   </component>
@@ -69,22 +82,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="638" y="305" key="#ESLint/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613240508758" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1613255724464">
+    <state width="1515" height="238" key="GridCell.Tab.0.bottom" timestamp="1613430433487">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613255724464" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1613255724464">
+    <state width="1515" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613430433487" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613255968725" />
+    <state width="1515" height="238" key="GridCell.Tab.0.center" timestamp="1613430433487">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613255724464" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1613255724464">
+    <state width="1515" height="238" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613430433487" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613255968725" />
+    <state width="1515" height="238" key="GridCell.Tab.0.left" timestamp="1613430433486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613255724464" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1613255724464">
+    <state width="1515" height="238" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613430433486" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613255968724" />
+    <state width="1515" height="238" key="GridCell.Tab.0.right" timestamp="1613430433487">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613255724464" />
+    <state width="1515" height="238" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1613430433487" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613255968725" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1613253206580">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
